@@ -29,7 +29,7 @@ public class HomeController {
     @RequestMapping("/")
     public String index(Model model){
 
-        return viewPage(model,"name", "asc");
+        return viewPage(model,"id", "asc");
     }
 
 
