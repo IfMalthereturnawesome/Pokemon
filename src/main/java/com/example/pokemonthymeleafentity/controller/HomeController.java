@@ -56,6 +56,15 @@ public class HomeController {
         return "update-pokemon";
     }
 
+    @RequestMapping("/{id}")
+    public String pokemonIndividual(@PathVariable("id") long id, Model model) {
+        Pokemon pokemon = pokemonRepo.findById(id)
+                .orElseThrow(() -> new IllegalArgumentException("Invalid pokemon Id:" + id));
+
+        model.addAttribute("pokemons", pokemon);
+        return "pokemonindividual";
+    }
+
     @GetMapping("/signup")
     public String showSignUpForm(Pokemon pokemon) {
         return "add-user";
