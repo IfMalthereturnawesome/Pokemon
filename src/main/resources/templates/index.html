@@ -61,33 +61,44 @@
             </th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <th scope="col">Image</th>
         </tr>
         </thead>
         <tbody>
         <tr th:each="pokemon: ${pokemons}">
             <td>
-                <a class="individual" th:href="@{/{id}(id=${pokemon.id})}"  th:text="${pokemon.id}" target="_blank" ></a>
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.id}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.name}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.name}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.speed}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.speed}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.specialDefence}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.speed}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.specialAttack}">
+            <td>
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"   th:text="${pokemon.specialAttack}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.defence}">
+            <td>
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"   th:text="${pokemon.defence}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.attack}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.attack}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.hp}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.hp}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.primaryType}">
+            <td>
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"   th:text="${pokemon.primaryType}" target="_blank" ></a>
             </td>
-            <td th:text="${pokemon.secondaryType}">
+            <td >
+                <a th:href="@{/{id}(id=${pokemon.id})}" class="individual"  th:text="${pokemon.secondaryType}" target="_blank" ></a>
             </td>
             <td class="row-update"><a class="link-row link" th:href="@{/edit/{id}(id=${pokemon.id})}">edit</a></td>
             <td class="row-delete"><a class="link-row link" th:href="@{/delete/{id}(id=${pokemon.id})}">delete</a></td>
+            <td><img th:src="@{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+ ${pokemon.id} + '.png'}" alt="${pokemon.name}"> </td>
         </tr>
         </tbody>
 

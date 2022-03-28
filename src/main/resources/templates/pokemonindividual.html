@@ -63,6 +63,7 @@
             </th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
+            <th scope="col">Image</th>
 
         </tr>
         </thead>
@@ -90,6 +91,7 @@
             </td>
             <td class="row-update"><a class="link-row link" th:href="@{/edit/{id}(id=${pokemon.id})}">edit</a></td>
             <td class="row-delete"><a class="link-row link" th:href="@{/delete/{id}(id=${pokemon.id})}">delete</a></td>
+            <td><img th:src="@{'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/'+ ${pokemon.id} + '.png'}" alt="pokemon"> </td>
         </tr>
         </tbody>
 
