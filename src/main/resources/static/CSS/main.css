@@ -64,7 +64,6 @@ table {
 }
 
 a {
-    color: white;
     text-decoration: none;
 }
 
@@ -104,6 +103,7 @@ button:hover {
 }
 
 .link {
+    color: black;
 
 }
 
@@ -278,6 +278,11 @@ button:hover {
     color: black;
 
 }
+a.individual {
+    color: black;
+}
+
+
 
 
 

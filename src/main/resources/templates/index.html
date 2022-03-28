@@ -25,8 +25,6 @@
             <button><a href="/signup" class="button-link">Add new Pokemon</a></button>
 
         </div>
-
-
     </div>
     <h1>Pokemon liste</h1>
     <table>
@@ -63,12 +61,12 @@
             </th>
             <th scope="col">Edit</th>
             <th scope="col">Delete</th>
-
         </tr>
         </thead>
         <tbody>
         <tr th:each="pokemon: ${pokemons}">
-            <td th:text="${pokemon.id}">
+            <td>
+                <a class="individual" th:href="@{/{id}(id=${pokemon.id})}"  th:text="${pokemon.id}" target="_blank" ></a>
             </td>
             <td th:text="${pokemon.name}">
             </td>
