@@ -118,5 +118,9 @@ public class Pokemon {
     public void setSecondaryType(String secondaryType) {
         this.secondaryType = secondaryType;
     }
+
 }
+
+
+
 
